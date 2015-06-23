@@ -14,3 +14,8 @@ on a Dockerfile you need to add:
 
     # You can create complex entrypoint shell script
     CMD "./bin/instance fg"
+
+
+If you wanna try plone version you can:
+
+    docker run --name plone -p 8080:8080 ramonnb/docker-base-plone:5.0
