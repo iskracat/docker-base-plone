@@ -17,4 +17,4 @@ VOLUME /plone/var/
 # Expose
 EXPOSE  8080
 
-CMD ["/plone/bin/instance fg"]
+CMD ["/plone/bin/instance", "fg"]
