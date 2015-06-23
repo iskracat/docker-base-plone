@@ -8,7 +8,7 @@ RUN rm -rf /plone/* \
     && cd /plone \
     && python bootstrap.py \
     && ./bin/buildout -v \
-    && chown -R www-data /plone/var \
+    && chown -R www-data /plone \
     && echo "" >> /plone/parts/instance/etc/zope.conf \
     && echo "effective-user www-data" >> /plone/parts/instance/etc/zope.conf
 
@@ -17,4 +17,4 @@ VOLUME /plone/var/
 # Expose
 EXPOSE  8080
 
-CMD ["su www-data /plone/bin/instance fg"]
+CMD ["/plone/bin/instance fg"]
