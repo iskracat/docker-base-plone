@@ -8,7 +8,7 @@ RUN rm -rf /plone/* \
     && cd /plone \
     && python bootstrap.py \
     && ./bin/buildout -v \
-    && chmod -R www-data /plone/var \
+    && chown -R www-data /plone/var \
     && echo "" >> /plone/parts/instance/etc/zope.conf \
     && echo "effective-user www-data" >> /plone/parts/instance/etc/zope.conf
 
